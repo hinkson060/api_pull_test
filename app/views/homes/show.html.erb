@@ -1,0 +1,22 @@
+<br>
+<div class="row">
+    <div class="col-xs-6">
+        <%= line_chart @ticks.pluck(:timestamp, :price),
+            min: @min_graph_y, max: @max_graph_y, width: "900px", height: "700px", points: false %>
+    </div>
+</div>
+<br>
+
+<table>
+    <tr>
+        <th>Price</th>
+        <th>Time</th>
+    </tr>
+    
+    <% @ticks.each do |tick| %>
+        <tr>
+            <td><%= tick.price %></td>
+            <td><%= tick.timestamp.in_time_zone('Central Time (US & Canada)').strftime('%I:%M:%S %p, %m/%d/%Y') %></td>
+        </tr>
+    <% end %>
+</table>

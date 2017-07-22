@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: myapp_development
+  pool: 5
+  username: myapp
+  password: password1
+  template: template0
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: myapp_test
+  pool: 5
+  username: myapp
+  password: password1
+  template: template0
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: myapp_production
+  pool: 5
+  username: myapp
+  password: password1
+  template: template0
