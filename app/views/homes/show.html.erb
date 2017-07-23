@@ -1,11 +1,10 @@
-<br>
 <div class="row">
     <div class="col-xs-6">
-        <%= line_chart @ticks.pluck(:timestamp, :price),
-            min: @min_graph_y, max: @max_graph_y, width: "900px", height: "700px", points: false %>
+       <%= line_chart @ticks.pluck(:timestamp, :price),
+            min: @min_graph_y, max: @max_graph_y, width: "900px", height: "700px",
+            points: false, title: "BTC (USD) --- Bitfniex" %>
     </div>
 </div>
-<br>
 
 <table>
     <tr>
@@ -20,3 +19,4 @@
         </tr>
     <% end %>
 </table>
+<br>
